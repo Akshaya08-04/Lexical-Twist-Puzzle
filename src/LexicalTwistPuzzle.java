@@ -3,7 +3,6 @@ import java.util.Scanner;
 public class LexicalTwistPuzzle {
 
     public static void main(String[] args) {
-
         Scanner sc = new Scanner(System.in);
 
         System.out.println("Lexical Twist Puzzle");
@@ -15,5 +14,9 @@ public class LexicalTwistPuzzle {
         String word2 = sc.nextLine();
 
         System.out.println("You entered: " + word1 + " and " + word2);
+        if(word1.contains(" ") || word2.contains(" ")) {
+            System.out.println("Invalid word input. Only single words allowed.");
+            return;
+        }
     }
 }
